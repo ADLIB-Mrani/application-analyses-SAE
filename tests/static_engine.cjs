@@ -1,7 +1,8 @@
 'use strict';
 // Run: node tests/static_engine.cjs
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
-const root=path.resolve(__dirname,'../docs/pages');
+const pages=path.resolve(__dirname,'../docs/pages');
+const root=fs.existsSync(path.join(pages,'browser-api.js'))?pages:path.resolve(__dirname,'../docs');
 const native=async url=>{const name=String(url).replace('./','');return new Response(fs.readFileSync(path.join(root,name)),{status:200});};
 const context={window:{fetch:native},Response,TextDecoder,crypto:require('node:crypto').webcrypto,FormData,File,Blob,Uint8Array,structuredClone,console};
 vm.createContext(context);
