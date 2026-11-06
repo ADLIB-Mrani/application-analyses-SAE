@@ -1,0 +1,85 @@
+[
+  {
+    "id": "id_repondant",
+    "label": "Identifiant technique",
+    "type": "identifier",
+    "required": true,
+    "allowed_values": [],
+    "identifier": true
+  },
+  {
+    "id": "age",
+    "label": "Tranche d’âge",
+    "type": "categorical",
+    "required": true,
+    "allowed_values": [
+      "18-24",
+      "25-34",
+      "35-49",
+      "50+"
+    ],
+    "identifier": false
+  },
+  {
+    "id": "region",
+    "label": "Région",
+    "type": "categorical",
+    "required": true,
+    "allowed_values": [
+      "Ouest",
+      "Nord",
+      "Sud",
+      "Est"
+    ],
+    "identifier": false
+  },
+  {
+    "id": "frequence_achat",
+    "label": "Fréquence d’achat",
+    "type": "categorical",
+    "required": true,
+    "allowed_values": [
+      "Hebdomadaire",
+      "Mensuelle",
+      "Rarement"
+    ],
+    "identifier": false
+  },
+  {
+    "id": "produit_prefere",
+    "label": "Produit préféré",
+    "type": "categorical",
+    "required": true,
+    "allowed_values": [
+      "Pizza",
+      "Salade",
+      "Pâtes"
+    ],
+    "identifier": false
+  },
+  {
+    "id": "satisfaction",
+    "label": "Satisfaction (1 à 5)",
+    "type": "ordinal",
+    "required": true,
+    "allowed_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "identifier": false
+  },
+  {
+    "id": "intention_achat",
+    "label": "Intention d’achat",
+    "type": "categorical",
+    "required": true,
+    "allowed_values": [
+      "Oui",
+      "Non"
+    ],
+    "identifier": false
+  }
+]
