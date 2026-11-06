@@ -1,0 +1,27 @@
+# Python / tests
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+# Réponses individuelles et sessions : ne jamais les publier
+data/
+uploads/
+sessions/
+exports/
+*.sae
+*.xlsx
+*.xls
+*.sqlite
+*.db
+*.sqlite3
+# CSV de démonstration explicitement autorisés
+*.csv
+!examples/reponses_demo.csv
+!docs/reponses_demo.csv
+# Fichiers temporaires
+.DS_Store
+*.log
