@@ -21,3 +21,4 @@ jobs:
           node --check docs/app.js
           node --check docs/browser-api.js
           test -f docs/index.html
+          node tests/static_engine.cjs
