@@ -58,3 +58,14 @@ pytest -q
 - Sodebo, métiers Études : https://www.sodebo.com/recrutement/nos-metiers/developpement-produit
 - CCMP, étude de cas pédagogique « Sodebo : analyse des résultats d'enquête » : https://ccmp.fr/collection-ccmp/cas-sodebo (mention de Sphinx **dans le cas académique seulement**)
 - Documentation Shiny pour Python : https://shiny.posit.co/py/docs/bookmarking.html
+
+## Démo GitHub Pages
+
+- Sources : [docs/index.html](docs/index.html), [docs/app.js](docs/app.js), [docs/browser-api.js](docs/browser-api.js).
+- **Traitement local au navigateur** : le fichier CSV n'est pas téléversé vers GitHub.
+- Import CSV UTF-8, regroupements de modalités, cibles ET/OU, tableau croisé, khi-deux, graphique, export CSV agrégé et configuration JSON.
+- **Différences par rapport au backend Python** : pas d'import Excel .xlsx, ni d'archive .sae chiffrée ; p-valeurs JS validées uniquement sur certains exemples.
+- Pour publier : Settings > Pages > Build and deployment > Source **GitHub Actions**. Le workflow `.github/workflows/pages.yml` prend ensuite le relais.
+- Tests CI : `python -m pytest -q` et `node tests/static_engine.cjs`. Les données exemple sont **fictives**.
+
+⚠️ Le site public n'est pas un hébergement de l'API FastAPI. Ni le masquage des cellules, ni l'absence d'envoi serveur ne garantissent l'anonymat complet à partir de jeux de données réels.
